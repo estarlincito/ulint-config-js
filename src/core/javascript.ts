@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import eslint from '@eslint/js';
+import type { Linter } from 'eslint';
 import { defineConfig } from 'eslint/config';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import Import from 'eslint-plugin-import';
@@ -14,7 +15,7 @@ import sortKeys from 'eslint-plugin-sort-keys-fix';
 import unusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 
-const jsConfig = defineConfig([
+const jsConfig: Linter.Config[] = defineConfig([
   security.configs.recommended,
   Import.flatConfigs.recommended,
   eslint.configs.recommended,
