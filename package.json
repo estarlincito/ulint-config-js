@@ -1,0 +1,89 @@
+{
+  "name": "ulint-config-js",
+  "type": "module",
+  "version": "0.0.2",
+  "description": "JavaScript ESLint configuration preset for uLint — includes recommended and strict rules for modern JavaScript projects.",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prepublishOnly": "pnpm clean && pnpm check-types && pnpm build && pnpm lint",
+    "release": "npm publish --access public",
+    "test": "vitest",
+    "check-types": "pnpm tsc --noEmit",
+    "lint": "pnpm ulint . --max-warnings 0",
+    "clean": "rm -rf dist",
+    "build": "pnpm vite build",
+    "dev": "pnpm vite build -w"
+  },
+  "keywords": [
+    "ulint-config-js",
+    "ulint",
+    "lint",
+    "eslint",
+    "react",
+    "next",
+    "node",
+    "javascript",
+    "wrapper",
+    "linter",
+    "code quality",
+    "code review",
+    "clean code",
+    "static analysis",
+    "eslint-config",
+    "ts",
+    "config",
+    "preset",
+    "frontend",
+    "backend",
+    "javascript-eslint"
+  ],
+  "author": {
+    "name": "Estarlin R",
+    "email": "dev@estarlincito.com",
+    "url": "https://estarlincito.com"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/estarlincito/ulint-config-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/estarlincito/ulint-config-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/estarlincito/ulint-config-js/issues"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.35.0",
+    "@types/eslint": "^9.6.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-safeguard": "^2.0.7",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-unused-imports": "^4.2.0",
+    "globals": "^15.15.0",
+    "prettier-plugin-packagejson": "^2.5.19",
+    "prettier": "^3.6.2",
+    "eslint": "^9.35.0"
+  },
+  "devDependencies": {
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint-plugin-security": "^3.0.0",
+    "@types/eslint__eslintrc": "^2.1.2",
+    "@types/node": "^24.3.1",
+    "doglob": "^0.0.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
+    "vite-plugin-dts": "^4.5.4",
+    "ulint": "^0.0.5",
+    "ulint-config-ts": "^0.0.1"
+  }
+}
